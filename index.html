@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice Doodle Doo</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" id="intro-view">
+
+
+        <div class="col-sm-4">
+
+          <form class="form-group" id="startingForm">
+
+          <input class="form-control" type="text" id="player1name" placeholder="Ready Player One"></input>
+          <input class="form-control" type="text" id="player2name" placeholder="Ready Player Two"></input>
+          <button type="submit" class="btn btn-primary" id="startButton">PLAY DOODLE DOO</button>
+          </form>
+        </div>
+      </div> <!-- END OF STARTING FORM ROW -->
+
+      <div class="row" id="gameTimeRow">
+        <div class="col-sm-4 text-center" id="playerOneScore">
+          <h3>Player 1</h3>
+        </div>
+        <div class="col-sm-4 text-center" id="theDice">
+          <h3></h3>
+          <p><img id="dice" src="http://cliparts.co/cliparts/8TE/b9o/8TEb9oxGc.gif"></p>
+        </div>
+        <div class="col-sm-4 text-center" id="playerTwoScore">
+          <h3>Player 2</h3>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
