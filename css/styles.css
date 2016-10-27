@@ -1,0 +1,157 @@
+* {
+  font-family: Domine;
+}
+
+#startingForm button {
+  display: block;
+  border-radius: 100px;
+  background-color: black;
+  border-color: black;
+  margin: 0 auto;
+  width: 200px;
+  color: white;
+  box-shadow: 0 .5px #999;
+}
+
+#theDice button {
+  display: block;
+  border-radius: 100px;
+  background-color: black;
+  border-color: black;
+  margin: 0 auto;
+  width: 200px;
+  color: white;
+  box-shadow: 0 .5px #999;
+}
+
+#theDice button:focus {
+  outline: none;
+}
+
+
+#gameTimeRow {
+  display: none;
+}
+
+#intro-view {
+  display: none;
+}
+
+
+#dice {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.title {
+  font-size: 18rem;
+}
+
+#rulespopup {
+  display: none;
+  height: 500px;
+  background-color: #FFA07A;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+#rulespopup h1,
+#rulespopup ol {
+  display: none;
+}
+
+.listrules {
+  margin-top: 150px;
+  text-align: justify;
+}
+
+.listrules li {
+  margin-top: 40px;
+}
+
+
+
+.start-game {
+  border-radius: 100px;
+  background-color: black;
+  border-color: black;
+  width: 200px;
+  color: white;
+  box-shadow: 0 .5px #999;
+  float: left;
+  margin-top: 12px;
+  margin-left: 5%
+}
+
+#startButton:focus {
+  outline: none;
+}
+
+#startButton:hover {
+  color: white;
+}
+
+.rules-display {
+  border-radius: 100px;
+  float: right;
+  margin: 6px;
+  margin-right: 5%;
+  background-color: black;
+  border-color: black;
+  width: 75px;
+}
+
+.rules-display {
+  border-radius: 100px;
+  float: right;
+  margin: 6px;
+  margin-right: 5%;
+  background-color: black;
+  border-color: black;
+  width: 75px;
+}
+
+#rules-display:focus {
+  outline: none;
+}
+
+.rules-btn-long {
+  width: 100px;
+}
+
+
+.rules-menu {
+  height: 60px;
+  color: white;
+  background-color: #FFA07A;
+}
+
+#player1score,
+#player2score {
+  font-size: 15rem;
+}
+
+#player1name,
+#player2name {
+  border: none;
+  margin: 15px 0 15px 0;
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+  outline: none;
+  box-shadow: none;
+}
+
+#player1name::-webkit-input-placeholder,
+#player2name::-webkit-input-placeholder {
+  color: black;
+}
+
+button:active {
+  box-shadow: 0 .5px #999;
+  transform: translateY(2.5px);
+}
+
+.current {
+  background-color: #FFA07A;
+  border-radius: 500px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Oswald:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row" id="rulespopup">
+        <div class="col-sm-4 text-center" id="">
+          <h1 class="text-uppercase">Rules of the Game:</h1>
+        </div>
+        <div class="col-sm-7 text-center" id="">
+          <ol class="listrules">
+            <li> If the player rolls a 1, they score nothing and it becomes the next player's turn</li>
+            <li> If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+            <li> If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+            <li> First player to collect 100 points wins the game.</li><br>
+            <h4>Make Sense?</h4>
+
+          </ol>
+
+
+        </div>
+        <div class="col-sm-4 text-center" id="">
+        </div>
+      </div><!-- END OF GAME ROW -->
+    </div>
+
+    <div class="fluid-container rules-menu">
+      <div class="row">
+        <div class="col-xs-12 rules-menu-div">
+          <button type="button" class="btn start-game" id="startButton">N E W G A M E</button>
+          <button type="button" id="rules-display" class="btn rules-display"><img src="img/wavy.png" class="img-responsive"></button>
+        </div>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <div class"col-sm-12">
+          <h1 class="text-center text-uppercase title"> Pig Dice</h1>
+        </div>
+        <div class="col-sm-4 col-sm-push-4" id="intro-view">
+          <form class="form-group" id="startingForm">
+            <h1 class="text-center text-uppercase">Who's playing?</h1>
+          <input class="form-control" type="text" id="player1name" placeholder="Ready Player One" autofocus></input>
+          <input class="form-control" type="text" id="player2name" placeholder="Ready Player Two"></input>
+          <button type="submit" class="btn btn-primary" id="startButton">PLAY!</button>
+          </form>
+        </div>
+      </div> <!-- END OF STARTING FORM ROW -->
+
+      <div class="row" id="gameTimeRow">
+        <div class="col-sm-4 text-center" id="playerOneName">
+          <h1 class="text-center"><span id="player1score"></span></h1>
+        </div>
+        <div class="col-sm-4 text-center" id="theDice">
+
+          <h2>Current Roll Score: <span id="currentRoll"></span>
+          <p><img id="dice" src="http://cliparts.co/cliparts/8TE/b9o/8TEb9oxGc.gif"></p>
+          <button id="collectButton" class="btn btn-success" type="button">Collect your Points!</button>
+        </div>
+        <div class="col-sm-4 text-center" id="playerTwoName">
+          <h1 class="text-center"><span id="player2score"></span></h1>
+        </div>
+      </div><!-- END OF GAME ROW -->
+
+
+
+    </div>
+  </body>
+</html>
