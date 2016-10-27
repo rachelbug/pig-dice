@@ -42,19 +42,19 @@ Game.prototype.roll = function() {
 
 $(document).ready(function() {
 
-$("button#rules-display").click(function(event) {
-    event.preventDefault();
-    $("#rulespopup").slideToggle(1000, function() {
-      $("#rulespopup h1, #rulespopup ol").toggle();
-    });
-});
-
-$("#startButton").click(function() {
-  $("#startButton").fadeOut(1000, function() {
-    $(".newgamediv").hide();
-    $("#intro-view").show();
+  $("button#rules-display").click(function(event) {
+      event.preventDefault();
+      $("#rulespopup").slideToggle(1000, function() {
+        $("#rulespopup h1, #rulespopup ol").toggle();
+      });
   });
-});
+
+  $("#startButton").click(function() {
+    $("#startButton").fadeOut(1000, function() {
+      $(".newgamediv").hide();
+      $("#intro-view").show();
+    });
+  });
 
   $("form#startingForm").submit(function(event) {
     event.preventDefault();
@@ -80,10 +80,15 @@ $("#startButton").click(function() {
     $("#collectButton").click(function() {
       newGame.collect();
       updateDisplay(newGame.p1score, newGame.p2score, newGame.rollScore, newGame.player1active);
+
       if (newGame.p1score >= 100) {
-        $("")
+        $("#gameTimeRow, #title").hide();
+          $("#winner").append("<h1>" + newGame.player1Name + " is the weiner!</h1>");
+          $("#winner").show();
       } else if (newGame.p2score >= 100) {
-        $("")
+        $("#gameTimeRow, #title").hide();
+        $("#winner").append("<h1>" + newGame.player2Name + " is the weiner!</h1>");
+          $("#winner").show();
       }
     });
   });
