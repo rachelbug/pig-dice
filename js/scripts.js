@@ -1,5 +1,6 @@
 // BUSINESS LOGIC
 
+<<<<<<< HEAD
  function Game(player1name, player2name) {
    this.player1Name = player1name;
    this.player2Name = player2name;
@@ -27,10 +28,34 @@ Game.prototype.switch = function() {
 
 randomRoll = function() {
   return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+=======
+ function Player(name, score) {
+   this.playerName = name;
+   this.playerScore = score;
+ }
+
+ Player.prototype.addScore = function() {
+ };
+
+var activePlayer;
+var rollScore;
+
+var changePlayer = function() {
+  if (activePlayer === player1) {
+    activePlayer = player2;
+  } else if (activePlayer === player2) {
+    activePlayer = player1;
+  }
+};
+
+randomRoll = function() {
+  return  Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+>>>>>>> e2495febd00ec2f04251cd35cc33b9ffdae40c78
 };
 
 
 
+<<<<<<< HEAD
 Game.prototype.roll = function() {
   var currentRoll = randomRoll();
   if (currentRoll === 1) {
@@ -43,6 +68,18 @@ Game.prototype.roll = function() {
 
 
 };
+=======
+var roll = function() {
+ rollScore = 0;
+ rollScore += randomRoll();
+ if (rollScore === 1) {
+   changePlayer();
+   rollScore = 0;
+ } 
+};
+
+
+>>>>>>> e2495febd00ec2f04251cd35cc33b9ffdae40c78
 
 
 
@@ -50,6 +87,7 @@ Game.prototype.roll = function() {
 // USER LOGIC
 
 $(document).ready(function() {
+<<<<<<< HEAD
 
 $("button#rules-display").click(function(event) {
     event.preventDefault();
@@ -69,12 +107,15 @@ $("#startButton").click(function() {
 
 
 
+=======
+>>>>>>> e2495febd00ec2f04251cd35cc33b9ffdae40c78
   $("form#startingForm").submit(function(event) {
     event.preventDefault();
 
     var player1name = $("#player1name").val();
     var player2name = $("#player2name").val();
 
+<<<<<<< HEAD
     var newGame = new Game(player1name, player2name);
 
     $("#intro-view").fadeOut(2000, function() {
@@ -101,11 +142,32 @@ $("#startButton").click(function() {
 
 
     });
+=======
+    var player1 = new Player(player1name, 0);
+    var player2 = new Player(player2name, 0);
+
+    $("#intro-view").fadeOut(2000, function() {
+      $("#gameTimeRow").fadeIn(2000);
+
+    });
+
+    activePlayer = player1;
+
+    $("#dice").click(function () {
+      roll();
+      alert(rollScore);
+
+
+    });
+
+
+>>>>>>> e2495febd00ec2f04251cd35cc33b9ffdae40c78
 
 
   });
 
 });
+<<<<<<< HEAD
 
 
 var updateDisplay = function(p1score, p2score, rollscore, isp1active) {
@@ -121,3 +183,5 @@ var updateDisplay = function(p1score, p2score, rollscore, isp1active) {
     $("#playerTwoName").addClass("current");
   }
 };
+=======
+>>>>>>> e2495febd00ec2f04251cd35cc33b9ffdae40c78
